@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- OG / Twitter 태그 (JS로 동적 업데이트됨) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Modam" />
+  <meta property="og:title" content="Artwork on Modam" />
+  <meta property="og:description" content="Discover and collect original artworks from emerging artists." />
+  <meta property="og:image" content="https://lkm1110.github.io/modam-docs/og-default.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Artwork on Modam" />
+  <meta name="twitter:description" content="Discover and collect original artworks from emerging artists." />
+
+  <title>Artwork on Modam</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --gold: #C8A96E;
+      --gold-light: #E8C87A;
+      --bg: #010204;
+      --card: #0B0F1A;
+      --border: #1A2235;
+      --text: #E5E7EB;
+      --muted: #6B7280;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+
+    /* ── 로딩 ── */
+    #loading {
+      text-align: center;
+    }
+    .spinner {
+      width: 40px; height: 40px;
+      border: 2px solid var(--border);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: spin 0.9s linear infinite;
+      margin: 0 auto 20px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── 카드 ── */
+    #card {
+      display: none;
+      width: 100%;
+      max-width: 420px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .artwork-img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      background: var(--border);
+      display: block;
+    }
+    .artwork-img-placeholder {
+      width: 100%;
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, #0D1220 0%, #1A2235 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .artwork-img-placeholder svg {
+      opacity: 0.2;
+    }
+
+    .info {
+      padding: 24px;
+    }
+
+    .artist-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .avatar {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .artist-name {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .artist-handle {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .artwork-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 1.2;
+      letter-spacing: 0.5px;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .artwork-meta {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .meta-tag {
+      font-size: 11px;
+      color: var(--muted);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 4px 10px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .artwork-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+    .price {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--gold);
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: 0.5px;
+    }
+    .sale-badge {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge-available { background: rgba(16,185,129,0.1); color: #10B981; border: 1px solid rgba(16,185,129,0.2); }
+    .badge-sold { background: rgba(239,68,68,0.1); color: #EF4444; border: 1px solid rgba(239,68,68,0.2); }
+    .badge-nfs { background: rgba(107,114,128,0.1); color: var(--muted); border: 1px solid var(--border); }
+
+    /* ── 버튼 ── */
+    .btn-open {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      background: var(--gold);
+      color: #000;
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-bottom: 12px;
+      letter-spacing: 0.3px;
+      transition: background 0.2s;
+    }
+    .btn-open:hover { background: var(--gold-light); }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .divider-line { flex: 1; height: 1px; background: var(--border); }
+    .divider-text { font-size: 12px; color: var(--muted); }
+
+    .store-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .btn-store {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-store:hover { border-color: var(--gold); background: rgba(200,169,110,0.06); }
+    .btn-store svg { flex-shrink: 0; }
+
+    /* ── 로고 ── */
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 6px;
+      color: var(--muted);
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    /* ── 에러 ── */
+    #error {
+      display: none;
+      text-align: center;
+      max-width: 300px;
+    }
+    #error h2 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; margin-bottom: 12px; }
+    #error p { font-size: 14px; color: var(--muted); margin-bottom: 24px; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <!-- 로딩 -->
+  <div id="loading">
+    <div class="spinner"></div>
+    <p style="color: var(--muted); font-size: 14px;">Loading artwork…</p>
+  </div>
+
+  <!-- 작품 카드 -->
+  <div id="card"></div>
+
+  <!-- 에러 -->
+  <div id="error">
+    <h2>Artwork not found</h2>
+    <p>This artwork may have been removed or the link is invalid.</p>
+    <a href="https://lkm1110.github.io/modam-docs/" style="color: var(--gold); font-size: 14px;">Go to Modam →</a>
+  </div>
+
+  <p class="logo">Modam</p>
+
+<script>
+  const SUPABASE_URL  = 'https://bkvycanciimgyftdtqpx.supabase.co';
+  const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJrdnljYW5jaWltZ3lmdGR0cXB4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTkxODQ5MDksImV4cCI6MjA3NDc2MDkwOX0.nYAt_sr_wTLy1PexlWV7G9fCXMSz2wsV2Ql5vNbY5zY';
+  const APP_SCHEME    = 'artyard';
+  const IOS_URL       = 'https://apps.apple.com/app/artyard/id6746969829';
+  const ANDROID_URL   = 'https://play.google.com/store/apps/details?id=com.artyard.app';
+
+  const params     = new URLSearchParams(location.search);
+  const artworkId  = params.get('id');
+
+  async function init() {
+    if (!artworkId) { showError(); return; }
+
+    // 딥링크 시도 (앱이 설치된 경우 열림)
+    tryOpenApp();
+
+    try {
+      const res = await fetch(
+        `${SUPABASE_URL}/rest/v1/artworks?id=eq.${artworkId}&is_hidden=eq.false&select=id,title,description,material,size,year,price,sale_status,images,author:profiles!artworks_author_id_fkey(handle,display_name,avatar_url,school)`,
+        { headers: { apikey: SUPABASE_ANON, Authorization: `Bearer ${SUPABASE_ANON}` } }
+      );
+      const data = await res.json();
+      if (!data || data.length === 0) { showError(); return; }
+      renderCard(data[0]);
+    } catch (e) {
+      console.error(e);
+      showError();
+    }
+  }
+
+  function tryOpenApp() {
+    const deepLink = `${APP_SCHEME}://artwork/${artworkId}`;
+    // iframe 트릭: 앱이 있으면 열리고, 없으면 아무것도 안 됨 (에러 없음)
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.src = deepLink;
+    document.body.appendChild(iframe);
+    setTimeout(() => document.body.removeChild(iframe), 2000);
+  }
+
+  function renderCard(a) {
+    const author       = a.author || {};
+    const authorName   = author.display_name || author.handle || 'Unknown Artist';
+    const authorHandle = author.handle ? `@${author.handle}` : '';
+    const imgSrc       = a.images?.[0] || '';
+    const price        = formatPrice(a.price, a.sale_status);
+    const badge        = formatBadge(a.sale_status);
+    const deepLink     = `${APP_SCHEME}://artwork/${a.id}`;
+
+    // OG 태그 동적 업데이트
+    if (imgSrc) setMeta('og:image', imgSrc);
+    setMeta('og:title', `${a.title} — Modam`);
+    setMeta('og:description', a.description || `${a.material} · ${a.size}`);
+    document.title = `${a.title} — Modam`;
+
+    document.getElementById('card').innerHTML = `
+      ${imgSrc
+        ? `<img class="artwork-img" src="${esc(imgSrc)}" alt="${esc(a.title)}" loading="lazy" />`
+        : `<div class="artwork-img-placeholder">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+           </div>`
+      }
+
+      <div class="info">
+        <div class="artist-row">
+          ${author.avatar_url
+            ? `<img class="avatar" src="${esc(author.avatar_url)}" alt="${esc(authorName)}" />`
+            : `<div class="avatar" style="background:var(--border)"></div>`
+          }
+          <div>
+            <div class="artist-handle">${esc(authorName)}</div>
+            ${authorHandle ? `<div class="artist-name">${esc(authorHandle)}</div>` : ''}
+          </div>
+        </div>
+
+        <h1 class="artwork-title">${esc(a.title)}</h1>
+
+        <div class="artwork-meta">
+          ${a.material ? `<span class="meta-tag">${esc(a.material)}</span>` : ''}
+          ${a.size     ? `<span class="meta-tag">${esc(a.size)}</span>` : ''}
+          ${a.year     ? `<span class="meta-tag">${a.year}</span>` : ''}
+        </div>
+
+        ${a.description ? `<p class="artwork-desc">${esc(a.description)}</p>` : ''}
+
+        <div class="price-row">
+          <span class="price">${price}</span>
+          <span class="sale-badge ${badge.cls}">${badge.label}</span>
+        </div>
+
+        <a class="btn-open" href="${deepLink}">Open in Modam App</a>
+
+        <div class="divider">
+          <div class="divider-line"></div>
+          <span class="divider-text">Don't have the app?</span>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="store-buttons">
+          <a class="btn-store" href="${IOS_URL}" target="_blank">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            App Store
+          </a>
+          <a class="btn-store" href="${ANDROID_URL}" target="_blank">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.4c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.39-1.32 2.76-2.54 3.99zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+            </svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+    `;
+
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('card').style.display    = 'block';
+  }
+
+  function showError() {
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('error').style.display   = 'block';
+  }
+
+  function formatPrice(price, status) {
+    if (status === 'not_for_sale') return 'Not for Sale';
+    if (status === 'sold')         return 'Sold';
+    if (!price || price === '0')   return 'Price on Request';
+    const n = parseInt(price, 10);
+    if (isNaN(n)) return price;
+    return n >= 1000
+      ? '₩' + n.toLocaleString()
+      : '$' + n.toLocaleString();
+  }
+
+  function formatBadge(status) {
+    switch (status) {
+      case 'available':   return { label: 'Available',     cls: 'badge-available' };
+      case 'sold':        return { label: 'Sold',          cls: 'badge-sold' };
+      case 'reserved':    return { label: 'Reserved',      cls: 'badge-nfs' };
+      case 'not_for_sale':return { label: 'Not for Sale',  cls: 'badge-nfs' };
+      default:            return { label: status || '',    cls: 'badge-nfs' };
+    }
+  }
+
+  function esc(str) {
+    return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function setMeta(prop, content) {
+    let el = document.querySelector(`meta[property="${prop}"]`);
+    if (!el) { el = document.createElement('meta'); el.setAttribute('property', prop); document.head.appendChild(el); }
+    el.setAttribute('content', content);
+  }
+
+  init();
+</script>
+</body>
+</html>
