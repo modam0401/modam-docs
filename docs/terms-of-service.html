@@ -2,188 +2,159 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="terms-of-service.html" />
   <title>Terms of Service — Modam</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    :root{--gold:#C8A96E;--bg:#010204;--card:#0B0F1A;--border:#1A2235;--text:#E5E7EB;--muted:#6B7280;--muted2:#9CA3AF;}
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.7;}
-    nav{padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(1,2,4,.92);backdrop-filter:blur(12px);z-index:10;}
-    .logo-text{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;letter-spacing:6px;color:var(--gold);text-transform:uppercase;text-decoration:none;}
-    .nav-back{font-size:12px;color:var(--muted);text-decoration:none;letter-spacing:1px;transition:color .2s;}
-    .nav-back:hover{color:var(--gold);}
-    .hero{padding:72px 24px 48px;text-align:center;border-bottom:1px solid var(--border);}
-    .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,6vw,52px);font-weight:300;letter-spacing:2px;margin-bottom:12px;}
-    .hero .updated{font-size:12px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;}
-    .content{max-width:760px;margin:0 auto;padding:60px 24px 80px;}
-    h2{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--gold);margin:52px 0 18px;padding-bottom:12px;border-bottom:1px solid var(--border);}
-    h3{font-size:13px;font-weight:600;color:var(--muted2);letter-spacing:1px;text-transform:uppercase;margin:28px 0 12px;}
-    p{font-size:14px;color:var(--muted);margin-bottom:14px;}
-    ul,ol{margin-left:20px;margin-bottom:14px;}
-    li{font-size:14px;color:var(--muted);margin-bottom:7px;}
-    strong{color:var(--text);font-weight:600;}
-    a{color:var(--gold);text-decoration:none;}
-    a:hover{text-decoration:underline;}
-    .box{padding:18px 22px;border-radius:8px;margin:20px 0;border-left:3px solid;}
-    .box-info{background:rgba(200,169,110,.07);border-color:var(--gold);}
-    .box-warn{background:rgba(239,68,68,.06);border-color:#EF4444;}
-    .box p,.box li{color:var(--muted2);}
-    .steps{counter-reset:step;margin:20px 0;}
-    .step{display:flex;gap:16px;margin:14px 0;align-items:flex-start;}
-    .step-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:rgba(200,169,110,.12);border:1px solid rgba(200,169,110,.3);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--gold);font-weight:600;margin-top:2px;}
-    .step-body{font-size:14px;color:var(--muted);}
-    footer{border-top:1px solid var(--border);padding:32px 24px;text-align:center;}
-    .footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 20px;margin-bottom:16px;}
-    .footer-links a{font-size:12px;color:var(--muted);text-decoration:none;transition:color .2s;}
-    .footer-links a:hover{color:var(--gold);}
-    .footer-copy{font-size:11px;color:var(--border);letter-spacing:1px;}
-    @media(max-width:600px){nav{padding:16px 20px;}.content{padding:40px 16px 60px;}}
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="modam-docs.css" />
 </head>
 <body>
-<nav>
-  <a class="logo-text" href="index.html">Modam</a>
-  <a class="nav-back" href="index.html">← Home</a>
+<div class="wrap">
+<nav class="doc-nav">
+  <a class="nav-mark" href="index.html">Modam</a>
+  <div class="nav-links">
+    <a class="nav-story" href="about-modam.html">Our Story</a>
+    <a class="nav-back" href="index.html">Home</a>
+  </div>
 </nav>
 
-<div class="hero">
+<div class="hero hero--doc">
   <h1>Terms of Service</h1>
-  <p class="updated">Last updated: April 2026</p>
+  <p class="updated">Effective: January 11, 2025 · Last updated: April 2026</p>
 </div>
 
 <div class="content">
-  <p>Welcome to Modam. By using our service, you agree to these terms. Please read them carefully.</p>
-
-  <h2>1. Service Overview</h2>
-  <p>Modam is a marketplace platform that connects artists with art buyers, and provides a community space for art enthusiasts. We facilitate payments but do not handle physical artwork delivery.</p>
-  <h3>Our Role</h3>
-  <ul>
-    <li>Process payments securely through <strong>Airwallex</strong> (hosted checkout; Modam does not store your card numbers)</li>
-    <li>Provide a platform for artwork listings</li>
-    <li>Facilitate communication between buyers and sellers</li>
-    <li>Hold funds until transaction completion</li>
-    <li>Operate a community forum for art discussion and engagement</li>
-  </ul>
-  <h3>What We Don't Do</h3>
-  <ul>
-    <li>We do <strong>not</strong> handle shipping or delivery</li>
-    <li>We are <strong>not</strong> responsible for artwork condition</li>
-    <li>We do <strong>not</strong> guarantee delivery timeframes</li>
-  </ul>
-
-  <h2>2. Purchases & Payments</h2>
-  <h3>Payment Processing</h3>
-  <ul>
-    <li>Checkout and card (and other eligible) payments are processed by <strong>Airwallex</strong>, our payment services provider</li>
-    <li>Platform fee: 10% of sale price (included in the price shown at checkout unless stated otherwise)</li>
-    <li>Airwallex's terms and privacy policy apply to the payment step — see <a href="https://www.airwallex.com/terms/" target="_blank" rel="noopener noreferrer">Airwallex Terms</a> and <a href="https://www.airwallex.com/terms/privacy-policy" target="_blank" rel="noopener noreferrer">Airwallex Privacy Policy</a></li>
-    <li>Modam does not store your full card or wallet credentials; payment data is handled by Airwallex</li>
-  </ul>
-  <h3>Shipping Arrangements</h3>
-  <div class="box box-warn">
-    <p><strong>Important:</strong> Shipping and delivery are arranged <strong>directly between buyer and seller</strong>. Modam is not involved in shipping and is not responsible for delivery timeframes, shipping costs, package damage or loss, or customs fees.</p>
-  </div>
-  <h3>Transaction Process</h3>
-  <div class="steps">
-    <div class="step"><div class="step-num">1</div><div class="step-body"><strong>Checkout:</strong> Buyer completes payment through Modam (Airwallex)</div></div>
-    <div class="step"><div class="step-num">2</div><div class="step-body"><strong>Seller review:</strong> Seller confirms the paid order and coordinates shipping with the buyer (e.g. in-app chat)</div></div>
-    <div class="step"><div class="step-num">3</div><div class="step-body"><strong>Ship:</strong> Seller ships the artwork to the buyer</div></div>
-    <div class="step"><div class="step-num">4</div><div class="step-body"><strong>Tracking:</strong> Seller enters <strong>carrier</strong> and <strong>tracking number</strong> in the order detail in the app so the buyer can follow delivery</div></div>
-    <div class="step"><div class="step-num">5</div><div class="step-body"><strong>Receipt:</strong> Buyer confirms receipt in the app when the work arrives</div></div>
-    <div class="step"><div class="step-num">6</div><div class="step-body"><strong>Settlement:</strong> Seller payout follows the schedule and rules shown in the app (e.g. after delivery confirmation or the applicable hold period)</div></div>
-  </div>
-
-  <h2>3. Refunds & Disputes</h2>
-  <ul>
-    <li>Refunds available before shipping begins</li>
-    <li>Once shipped, refunds are negotiated between buyer and seller</li>
-    <li>Modam can mediate disputes but has no shipping liability</li>
-    <li>Contact support within 7 days of delivery for dispute resolution</li>
-  </ul>
-  <p>For dispute resolution: <a href="mailto:modamceo@modam.app">modamceo@modam.app</a> — we review cases within 48–72 hours.</p>
-
-  <h2>4. User Responsibilities</h2>
-  <h3>For Sellers (Artists)</h3>
-  <ul>
-    <li>Accurately represent artworks</li>
-    <li>Respond promptly to buyer messages</li>
-    <li>Package artworks securely</li>
-    <li>Provide tracking information when available</li>
-  </ul>
-  <h3>For Buyers</h3>
-  <ul>
-    <li>Provide accurate shipping address</li>
-    <li>Agree on shipping method with seller</li>
-    <li>Confirm receipt upon delivery</li>
-    <li>Inspect artwork promptly after delivery</li>
-  </ul>
-
-  <h2>5. Account Terms</h2>
-  <ul>
-    <li>Must be 13+ years old to use Modam</li>
-    <li>One account per person</li>
-    <li>You are responsible for your account security — do not share your credentials</li>
-  </ul>
-
-  <h2>6. Community</h2>
-  <p>Modam includes a community forum where users may post text content organized by category (Art, Daily Life, Finance, Showcase, Free Topic, Issue Discussion).</p>
-  <h3>Community Rules</h3>
-  <ul>
-    <li>Posts and comments must comply with all other sections of these Terms</li>
-    <li>You are solely responsible for the content you post</li>
-    <li>By posting, you grant Modam a non-exclusive license to display your content on the platform</li>
-    <li>Modam may remove content that violates these Terms at any time without notice</li>
-  </ul>
-  <h3>Community Prohibited Content</h3>
-  <ul>
-    <li>Hate speech, harassment, or threats toward other users</li>
-    <li>Spam, advertising, or unsolicited self-promotion</li>
-    <li>Misinformation or deliberately false content</li>
-    <li>Content that infringes on any third party's intellectual property</li>
-    <li>Personal or private information of others without consent</li>
-  </ul>
-  <div class="box box-warn">
-    <p>Repeated violations of Community Rules may result in temporary or permanent account suspension.</p>
-  </div>
-
-  <h2>7. Prohibited Activities</h2>
-  <ul>
-    <li>Posting fake or misleading artwork</li>
-    <li>Harassment or abusive behavior</li>
-    <li>Attempting to bypass the payment system</li>
-    <li>Fraud or impersonation</li>
-    <li>Selling prohibited items (weapons, illegal substances, etc.)</li>
-    <li>Spam or excessive self-promotion</li>
-  </ul>
-
-  <h2>8. Intellectual Property</h2>
-  <ul>
-    <li>You own your artwork and content</li>
-    <li>By posting, you grant Modam a license to display it on the platform</li>
-    <li>You are responsible for copyright compliance</li>
-    <li>Report infringement to <a href="mailto:modamceo@modam.app">modamceo@modam.app</a></li>
-  </ul>
-
-  <h2>9. Limitation of Liability</h2>
-  <div class="box box-warn">
-    <p>Modam provides a <strong>platform only</strong>. We are not responsible for shipping delays, damage, or loss; artwork quality or accuracy; disputes between buyers and sellers; or issues attributable solely to our payment partner (Airwallex). Our liability is limited to the platform fee paid for a transaction.</p>
-  </div>
-
-  <h2>10. Termination</h2>
-  <p>We may suspend or terminate accounts for violation of these terms, fraudulent activity, abusive behavior, or legal reasons.</p>
-
-  <h2>11. Governing Law</h2>
-  <p>These terms are governed by the laws of South Korea. Disputes will be resolved in Seoul courts.</p>
-
-  <h2>12. Contact Us</h2>
   <div class="box box-info">
-    <p><strong>Email:</strong> <a href="mailto:modamceo@modam.app">modamceo@modam.app</a><br/>
-    <strong>In-App:</strong> Profile → Settings → Help &amp; Support</p>
+    <p><strong>Single binding version.</strong> This page is the only authoritative Terms of Service for Modam. Older copies or excerpts are superseded by this document together with the policies linked in the footer.</p>
   </div>
+
+  <h2>1. Acceptance</h2>
+  <p>By creating an account, accessing, or using Modam (the “<strong>Service</strong>”), you agree to these Terms of Service (“<strong>Terms</strong>”). If you do not agree, do not use the Service.</p>
+
+  <h2 id="operator">2. Operator &amp; contact</h2>
+  <p>The Modam mobile application and related services (the “<strong>Service</strong>”) are operated by the legal entity named below (“<strong>Operator</strong>,” “<strong>we</strong>,” “<strong>us</strong>”). The consumer-facing product and brand name is <strong>Modam</strong>. In legal, operator, and company fields, the English name <strong>Modam Co., Ltd.</strong> is used consistently.</p>
+  <div class="box box-info">
+    <p><strong>법인명(국문):</strong> 주식회사 모담<br/>
+    <strong>Legal name (English):</strong> Modam Co., Ltd.</p>
+    <p><strong>법정 사업자 정보(대표자, 사업장 소재지, 사업자등록번호, 통신판매업 신고 등):</strong> 대한민국 전자상거래 등 관련 법령이 정한 사항은 모바일 애플리케이션 <strong>Modam</strong> 내 사업자 정보·고지 화면(또는 설정 내 동등한 항목)에 게시하며, <a href="mailto:modamceo@modam.app">modamceo@modam.app</a>으로 서면 요청 시에도 안내합니다.</p>
+    <p><strong>Statutory business disclosures</strong> (registered representative, principal place of business, business registration number, and mail-order business report number, as applicable under Republic of Korea law): published in the Modam app’s business-information / disclosure screen under Settings (or equivalent) and provided in writing on request to <a href="mailto:modamceo@modam.app">modamceo@modam.app</a>.</p>
+    <p style="margin-top:14px;margin-bottom:0;font-size:13px;color:var(--muted2);">앱 및 배포 설정 시 영문 법인 표기는 <strong>Modam Co., Ltd.</strong>로 통일합니다 (예: <code>EXPO_PUBLIC_LEGAL_COMPANY_NAME</code>).</p>
+  </div>
+  <div class="box box-info">
+    <p><strong>Privacy &amp; personal data:</strong> <a href="mailto:modamceo@modam.app">modamceo@modam.app</a><br/>
+    <strong>Legal, contractual &amp; regulatory notices:</strong> <a href="mailto:modamceo@modam.app">modamceo@modam.app</a><br/>
+    <strong>General user support:</strong> Profile → Settings → Help &amp; Support (in-app)<br/>
+    <strong>Related policies:</strong> <a href="privacy-policy.html">Privacy Policy</a>, <a href="refund-policy.html">Refund Policy</a>, <a href="shipping-policy.html">Shipping Policy</a></p>
+  </div>
+
+  <h2>3. Service description</h2>
+  <p>Modam is a mobile marketplace and community that connects artists and buyers. We provide listing space, messaging, and checkout technology. We are a <strong>platform intermediary</strong>, not the seller of listed artworks.</p>
+  <ul>
+    <li>Artists may list original works they have the right to sell.</li>
+    <li>Buyers may purchase through checkout powered by our payment partner <strong>Stripe</strong>.</li>
+    <li>Community features (posts, comments) are governed by these Terms and our content rules below.</li>
+  </ul>
+
+  <h2>4. Eligibility &amp; accounts</h2>
+  <h3>4.1 Age</h3>
+  <p>You must be <strong>at least 14 years old</strong> to use the Service. If you are not old enough to enter into binding contracts for purchases in your jurisdiction, you may only buy with the consent of a parent or legal guardian. We do not knowingly collect data from children under 14; see our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+  <h3>4.2 Account security</h3>
+  <p>Sign-in may use Google, Apple, or Facebook. You must provide accurate information, keep credentials secure, and notify us of unauthorized use. One person per account unless we expressly allow otherwise.</p>
+
+  <h2>5. Marketplace model</h2>
+  <div class="box box-warn">
+    <p><strong>Shipping is between buyer and seller.</strong> Modam does not pick, pack, or ship physical artworks. Sellers and buyers arrange shipment (address, carrier, timing) directly, typically via in-app chat. Sellers enter <strong>carrier</strong> and <strong>tracking number</strong> in the order detail when available so buyers can track delivery.</p>
+  </div>
+  <p><strong>Shipping costs:</strong> Unless a listing or checkout screen states otherwise, the artist sets the listed price and is responsible for bearing shipping costs out of that price or as separately agreed with the buyer in writing in the Service. Modam does not guarantee any particular shipping method, speed, or cost.</p>
+  <h3>5.1 Import, export, sanctions, and restricted goods</h3>
+  <p>You must comply with applicable import, export, and customs laws. Listings must not facilitate illegal trade. <strong>Restricted or prohibited items</strong> (including, for example, certain cultural property, works subject to <strong>CITES</strong> wildlife/plant rules, or goods subject to <strong>sanctions and export-control</strong> regimes) may not be sold or shipped through the Service where law or our policies prohibit them. Modam may remove listings, cancel transactions, or freeze payouts when we reasonably believe law or policy is implicated.</p>
+  <p>If a shipment is <strong>refused by customs</strong>, returned, or destroyed due to inaccurate declarations, prohibited content, or the buyer’s failure to pay duties (where the buyer is responsible), <strong>additional costs and loss of value are generally borne by the party at fault</strong> under the <a href="refund-policy.html">Refund Policy</a> and applicable law — Modam does not guarantee refunds in those scenarios. <strong>Storage, return freight, and disposal charges</strong> assessed by a carrier or customs authority after refusal or failed clearance may, where reasonable and documented, be treated as part of those costs and allocated accordingly.</p>
+
+  <h2>6. Payments, fees &amp; settlement</h2>
+  <h3>6.1 Checkout</h3>
+  <p>Payments are processed by <strong>Stripe</strong>. Card and wallet rules are subject to Stripe’s terms and privacy notice — see <a href="https://stripe.com/legal" target="_blank" rel="noopener noreferrer">Stripe Legal</a> and <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">Stripe Privacy Policy</a>. Modam does not store your full card numbers.</p>
+  <h3>6.2 Platform fee</h3>
+  <p>Modam charges a <strong>platform fee</strong> on completed sales, calculated as disclosed at checkout or in the app (currently <strong>10%</strong> of the artwork line amount unless we notify you otherwise). The fee is retained by Modam from the sale proceeds; the seller receives the <strong>net payout amount shown</strong> in checkout or the order summary after that fee. If checkout displays <strong>taxes or other government charges</strong> as separate lines required by law, those appear only as shown on your payment receipt and are not additional undisclosed platform deductions.</p>
+  <h3>6.3 Hold &amp; payout timing</h3>
+  <p>Buyer funds may be <strong>held</strong> after payment succeeds until the order is completed under the rules shown in the app — for example, after the buyer confirms receipt or after a <strong>buyer protection period</strong> (typically about <strong>seven (7) days</strong> from delivery confirmation or as otherwise displayed). When conditions are met, seller payouts are initiated according to the schedule and rails shown in the app (which may include Stripe or other settlement providers). Timing can vary by region, verification (KYC/KYB), weekends, holidays, and partner processing.</p>
+
+  <h2>7. Refunds &amp; disputes</h2>
+  <p>Refunds are <strong>not</strong> guaranteed for change of mind. Eligibility depends on the stage of the order (e.g. before shipment vs. after delivery) and the <a href="refund-policy.html">Refund Policy</a>, which describes buyer protection and dispute windows. <strong>Refund eligibility does not depend on whether you purchased carrier insurance or add-ons from a courier.</strong></p>
+  <p><strong>Process:</strong> (1) Buyers and sellers should first try to resolve issues in good faith. (2) If unresolved, contact <a href="mailto:modamceo@modam.app">modamceo@modam.app</a> with order details. We will help facilitate resolution where reasonable; we are not obliged to provide a particular outcome except as stated in the Refund Policy or required by law.</p>
+  <h3>7.1 Response times</h3>
+  <ul>
+    <li><strong>General support</strong> (questions not tied to an open order dispute): we <strong>target</strong> an initial acknowledgment within <strong>one (1) business day</strong>. Full answers may take longer depending on complexity.</li>
+    <li><strong>Refund and order disputes</strong> (evidence submitted and ticket linked to a paid order): we <strong>typically</strong> complete an initial merits review within <strong>three to five (3–5) business days</strong> when your evidence is complete; complex cases, high volume, or partner dependencies may take longer.</li>
+  </ul>
+
+  <h2>8. Transaction flow (summary)</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-body"><strong>Checkout:</strong> Buyer pays through Modam (Stripe).</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><strong>Fulfillment:</strong> Seller confirms the order and arranges shipping with the buyer.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><strong>Tracking:</strong> Seller provides carrier and tracking in the app when available.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-body"><strong>Receipt:</strong> Buyer confirms receipt or the protection period runs as shown in the app.</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-body"><strong>Settlement:</strong> Payout to seller follows app rules after release conditions are met.</div></div>
+  </div>
+  <p>There is <strong>one</strong> standard paid checkout flow through Modam; we do not operate a separate “direct payment” mode that bypasses these Terms.</p>
+
+  <h2>9. User responsibilities</h2>
+  <h3>9.1 Sellers</h3>
+  <ul>
+    <li>Accurate listings, pricing, and disclosure (including AI-assisted or reproduction works where applicable).</li>
+    <li>Prompt, professional fulfillment and secure packaging.</li>
+    <li>Compliance with tax, export, and customs laws where applicable.</li>
+  </ul>
+  <h3>9.2 Buyers</h3>
+  <ul>
+    <li>Accurate shipping and contact information.</li>
+    <li>Cooperation with customs and delivery.</li>
+    <li>Timely inspection and use of in-app tools for receipt / disputes within published windows.</li>
+  </ul>
+
+  <h2>10. Prohibited conduct</h2>
+  <p>You must not: infringe IP; list illegal or prohibited goods; harass users; commit fraud or abuse chargebacks; manipulate prices or reviews; scrape or reverse engineer the Service; circumvent payments; impersonate others; or use the Service for money laundering or unlawful activity.</p>
+
+  <h2>11. Community</h2>
+  <p>Community posts must be lawful and respectful. Do not post hate, harassment, non-consensual personal data, spam, or off-platform transaction schemes. We may remove content and suspend accounts. By posting, you grant Modam a non-exclusive license to host and display your content in the Service.</p>
+
+  <h2>12. Intellectual property</h2>
+  <p>You retain ownership of your content. You represent you have rights to sell listed art. Report infringement to <a href="mailto:modamceo@modam.app">modamceo@modam.app</a>. Modam’s branding and software are protected.</p>
+
+  <h2>13. Moderation &amp; enforcement</h2>
+  <p>We may investigate reports, remove content, and suspend or terminate accounts for violations, risk, or legal requirements.</p>
+
+  <h2>14. Privacy</h2>
+  <p>See the <a href="privacy-policy.html">Privacy Policy</a>. It describes categories of processing, legal bases, overseas transfers, and your rights.</p>
+
+  <h2>15. Disclaimers</h2>
+  <p>The Service is provided <strong>“as is”</strong> to the fullest extent permitted by law. We do not warrant uninterrupted operation, third-party conduct, authenticity of every listing, or shipping outcomes.</p>
+
+  <h2>16. Limitation of liability</h2>
+  <div class="box box-warn">
+    <p>To the maximum extent permitted by applicable law, Modam is not liable for indirect, incidental, special, consequential, or punitive damages, or loss of profits, data, or goodwill. Our aggregate liability for claims arising out of the Service in any twelve-month period shall not exceed the <strong>greater of</strong> (a) the total <strong>platform fees Modam retained</strong> from your completed purchase and sale transactions through the Service during that period, or (b) <strong>USD $100</strong>. Consumer rights that cannot be limited by contract in your jurisdiction remain unaffected.</p>
+  </div>
+
+  <h2>17. Indemnification</h2>
+  <p>You will indemnify and hold Modam harmless against claims arising from your content, your breach of these Terms, or your disputes with other users, except where prohibited by law.</p>
+
+  <h2>18. Termination</h2>
+  <p>You may delete your account as described in the app and <a href="data-deletion.html">Data Deletion</a> page. We may suspend or terminate for breach, risk, or legal reasons.</p>
+
+  <h2>19. Changes</h2>
+  <p>We may update these Terms. Material changes will be communicated by reasonable means (e.g. in-app notice or email). Continued use after the effective date constitutes acceptance unless applicable law requires otherwise.</p>
+
+  <h2>20. Governing law &amp; venue</h2>
+  <p>These Terms are governed by the laws of the <strong>Republic of Korea</strong>, without regard to conflict-of-law rules. Courts in <strong>Seoul, Korea</strong> have exclusive jurisdiction unless mandatory consumer protections require otherwise.</p>
+
+  <h2>21. Entire agreement</h2>
+  <p>These Terms, together with the policies linked in the footer that are expressly incorporated by reference, form the entire agreement between you and Modam regarding the Service.</p>
+
+  <h2>22. Special programs</h2>
+  <p>Challenges, auctions, or similar features may have <strong>additional rules</strong> shown at the time you participate. If those rules conflict with general marketing copy, the feature-specific rules and checkout disclosures control for that transaction.</p>
 </div>
 
-<footer>
+<footer class="doc-footer">
   <div class="footer-links">
     <a href="index.html">Home</a>
     <a href="privacy-policy.html">Privacy Policy</a>
@@ -195,5 +166,6 @@
   </div>
   <p class="footer-copy">© 2026 Modam. All rights reserved.</p>
 </footer>
+</div>
 </body>
 </html>

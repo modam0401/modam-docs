@@ -4,66 +4,32 @@
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Artist Guidelines — Modam</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    :root{--gold:#C8A96E;--bg:#010204;--card:#0B0F1A;--border:#1A2235;--text:#E5E7EB;--muted:#6B7280;--muted2:#9CA3AF;}
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.7;}
-    nav{padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(1,2,4,.92);backdrop-filter:blur(12px);z-index:10;}
-    .logo-text{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;letter-spacing:6px;color:var(--gold);text-transform:uppercase;text-decoration:none;}
-    .nav-back{font-size:12px;color:var(--muted);text-decoration:none;letter-spacing:1px;transition:color .2s;}
-    .nav-back:hover{color:var(--gold);}
-    .hero{padding:72px 24px 48px;text-align:center;border-bottom:1px solid var(--border);}
-    .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,6vw,52px);font-weight:300;letter-spacing:2px;margin-bottom:12px;}
-    .hero .updated{font-size:12px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;}
-    .content{max-width:760px;margin:0 auto;padding:60px 24px 80px;}
-    h2{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--gold);margin:52px 0 18px;padding-bottom:12px;border-bottom:1px solid var(--border);}
-    h3{font-size:13px;font-weight:600;color:var(--muted2);letter-spacing:1px;text-transform:uppercase;margin:28px 0 12px;}
-    p{font-size:14px;color:var(--muted);margin-bottom:14px;}
-    ul,ol{margin-left:20px;margin-bottom:14px;}
-    li{font-size:14px;color:var(--muted);margin-bottom:7px;}
-    strong{color:var(--text);font-weight:600;}
-    a{color:var(--gold);text-decoration:none;}
-    a:hover{text-decoration:underline;}
-    .box{padding:18px 22px;border-radius:8px;margin:20px 0;border-left:3px solid;}
-    .box-info{background:rgba(200,169,110,.07);border-color:var(--gold);}
-    .box-warn{background:rgba(239,68,68,.06);border-color:#EF4444;}
-    .box-success{background:rgba(16,185,129,.06);border-color:#10B981;}
-    .box p,.box li{color:var(--muted2);}
-    .do-dont{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0;}
-    .do{background:rgba(16,185,129,.05);border:1px solid rgba(16,185,129,.2);border-radius:8px;padding:16px 20px;}
-    .dont{background:rgba(239,68,68,.05);border:1px solid rgba(239,68,68,.2);border-radius:8px;padding:16px 20px;}
-    .do h4{font-size:12px;font-weight:600;color:#10B981;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;}
-    .dont h4{font-size:12px;font-weight:600;color:#EF4444;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;}
-    .do li,.dont li{font-size:13px;}
-    .badge-row{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0;}
-    .badge{padding:6px 14px;border-radius:20px;font-size:12px;font-weight:500;letter-spacing:.5px;}
-    .badge-gold{background:rgba(200,169,110,.15);color:var(--gold);border:1px solid rgba(200,169,110,.3);}
-    .badge-green{background:rgba(16,185,129,.12);color:#10B981;border:1px solid rgba(16,185,129,.25);}
-    .badge-red{background:rgba(239,68,68,.1);color:#EF4444;border:1px solid rgba(239,68,68,.2);}
-    footer{border-top:1px solid var(--border);padding:32px 24px;text-align:center;}
-    .footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 20px;margin-bottom:16px;}
-    .footer-links a{font-size:12px;color:var(--muted);text-decoration:none;transition:color .2s;}
-    .footer-links a:hover{color:var(--gold);}
-    .footer-copy{font-size:11px;color:var(--border);letter-spacing:1px;}
-    @media(max-width:600px){nav{padding:16px 20px;}.content{padding:40px 16px 60px;}.do-dont{grid-template-columns:1fr;}}
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="modam-docs.css" />
 </head>
 <body>
-<nav>
-  <a class="logo-text" href="index.html">Modam</a>
-  <a class="nav-back" href="index.html">← Home</a>
+<div class="wrap">
+<nav class="doc-nav">
+  <a class="nav-mark" href="index.html">Modam</a>
+  <div class="nav-links">
+    <a class="nav-story" href="about-modam.html">Our Story</a>
+    <a class="nav-back" href="index.html">Home</a>
+  </div>
 </nav>
 
-<div class="hero">
+<div class="hero hero--doc">
   <h1>Artist Guidelines</h1>
   <p class="updated">Last updated: April 2026</p>
 </div>
 
 <div class="content">
-  <p>Welcome to Modam! These guidelines ensure a fair, safe, and creative community for all artists and collectors. By selling on Modam, you agree to follow these rules.</p>
+  <p>Welcome to Modam! These guidelines support a fair, safe, and creative community for artists and collectors. By selling on Modam, you agree to follow the <strong>Rules</strong> below. <strong>Tips</strong> are suggestions only — they are not contractual obligations unless the same requirement appears in the <a href="terms-of-service.html">Terms of Service</a>.</p>
+  <div class="box box-info">
+    <p><strong>Rules</strong> = requirements Modam may enforce (warnings, removal, suspension, or termination). <strong>Tips</strong> = optional ideas for presentation and growth; we do not treat them as binding seller duties.</p>
+  </div>
 
-  <h2>Artwork Listing Requirements</h2>
+  <h2>Rules — artwork listings</h2>
   <h3>Authenticity & Originality</h3>
   <div class="do-dont">
     <div class="do">
@@ -124,7 +90,7 @@
     </div>
   </div>
 
-  <h2>Prohibited Content</h2>
+  <h2>Rules — prohibited content</h2>
   <div class="box box-warn">
     <p>The following content will result in immediate removal and possible account suspension:</p>
   </div>
@@ -142,15 +108,20 @@
     <li><strong>Religious Content:</strong> Respectful treatment of all religions</li>
   </ul>
 
-  <h2>Transaction Conduct</h2>
+  <h2>Rules — transaction conduct</h2>
   <h3>Communication Standards</h3>
   <ul>
-    <li><strong>Response Time:</strong> Reply to buyer inquiries within 24 hours</li>
-    <li><strong>Professional Tone:</strong> Courteous, helpful, and clear</li>
+    <li><strong>Response time:</strong> Reply to buyer inquiries promptly — within 24 hours when possible for pre-sale questions</li>
+    <li><strong>Professional tone:</strong> Courteous, helpful, and clear</li>
     <li><strong>Transparency:</strong> Be upfront about shipping times and policies</li>
   </ul>
+  <h3>Contact information &amp; off-platform diversion</h3>
+  <ul>
+    <li><strong>Before a valid Modam checkout:</strong> Do not solicit buyers to pay outside the app, and do not share personal contact details (phone, personal email, messenger handles, payment IDs, etc.) primarily to <strong>move the transaction off Modam</strong> or to evade platform checkout.</li>
+    <li><strong>After a valid paid order exists:</strong> You may exchange <strong>logistics contact details</strong> that are reasonably necessary for fulfillment (e.g. phone for courier, localized address clarifications), preferably through Modam chat when possible. Keep such use limited to completing that order.</li>
+  </ul>
   <div class="box box-warn">
-    <p><strong>Prohibited:</strong> Harassment, threats, or abuse; asking for payment outside platform; sharing personal contact info prematurely; spam or unsolicited advertising.</p>
+    <p><strong>Prohibited:</strong> Harassment, threats, or abuse; asking for payment outside Modam checkout; using Modam chat mainly to divert sales or fees off-platform; spam or unsolicited advertising unrelated to a genuine buyer inquiry.</p>
   </div>
 
   <h3>Shipping Excellence</h3>
@@ -159,37 +130,11 @@
     <li><strong>Pack Professionally</strong> to prevent damage</li>
     <li><strong>Carrier &amp; tracking in Modam:</strong> In your <strong>sale order detail</strong>, enter the courier name and tracking number once you have shipped — buyers rely on this to track delivery</li>
     <li><strong>Communicate Delays</strong> immediately if any issues arise</li>
-    <li><strong>Personal Touch</strong> — include a thank-you note or certificate</li>
   </ul>
 
-  <h2>Violation Consequences</h2>
-  <div class="badge-row">
-    <span class="badge badge-gold">1st Violation — 7-day listing suspension</span>
-    <span class="badge badge-red">2nd Violation — 30-day account suspension</span>
-  </div>
-  <div class="box box-warn">
-    <p><strong>3rd Violation or Serious Offense:</strong> Permanent account termination. No appeal for serious violations. Payment hold up to 90 days for existing orders.</p>
-  </div>
-  <h3>Immediate Ban Offenses</h3>
-  <ul>
-    <li>Fraud or scam attempts</li>
-    <li>Selling stolen artwork</li>
-    <li>Harassment or threats</li>
-    <li>Illegal content</li>
-    <li>Repeated copyright infringement</li>
-    <li>Fake reviews or rating manipulation</li>
-  </ul>
-
-  <h2>Community Participation</h2>
+  <h2>Rules — community participation</h2>
   <p>Modam's community forum is a space for artists and collectors to share ideas, showcase work, and discuss topics across categories: <strong>Art, Daily Life, Finance, Showcase, Free Topic, and Issue Discussion</strong>.</p>
-  <h3>Encouraged Activity</h3>
-  <ul>
-    <li><strong>Share your process:</strong> Post behind-the-scenes content, WIP shots, or artistic reflections</li>
-    <li><strong>Join discussions:</strong> Engage thoughtfully in Issue Discussion and Free Topic threads</li>
-    <li><strong>Showcase work:</strong> Use the Showcase category to highlight recent pieces — link back to your listings</li>
-    <li><strong>Support others:</strong> Like and comment constructively on other artists' posts</li>
-  </ul>
-  <h3>Community Content Rules</h3>
+  <h3>Community content rules</h3>
   <div class="do-dont">
     <div class="do">
       <h4>Do</h4>
@@ -214,22 +159,46 @@
     <p><strong>Violations in the community</strong> are subject to the same consequence system as marketplace violations — repeated offenses can result in account suspension.</p>
   </div>
 
-  <h2>Best Practices for Success</h2>
-  <h3>Build a Strong Profile</h3>
+  <h2>Rules — violation consequences</h2>
+  <div class="badge-row">
+    <span class="badge badge-gold">1st Violation — 7-day listing suspension</span>
+    <span class="badge badge-red">2nd Violation — 30-day account suspension</span>
+  </div>
+  <div class="box box-warn">
+    <p><strong>3rd Violation or Serious Offense:</strong> Permanent account termination. No appeal for serious violations. Payment hold up to 90 days for existing orders.</p>
+  </div>
+  <h3>Immediate ban offenses</h3>
+  <ul>
+    <li>Fraud or scam attempts</li>
+    <li>Selling stolen artwork</li>
+    <li>Harassment or threats</li>
+    <li>Illegal content</li>
+    <li>Repeated copyright infringement</li>
+    <li>Fake reviews or rating manipulation</li>
+  </ul>
+
+  <h2>Tips — growth and presentation (non-binding)</h2>
+  <p>The following sections are recommendations. They do not create enforceable duties or guarantees about visibility, ranking, or sales.</p>
+  <h3>Build a strong profile</h3>
   <ul>
     <li><strong>Complete Bio:</strong> Tell your artistic story (150–300 words)</li>
     <li><strong>Professional Photo:</strong> Clear headshot or studio photo</li>
     <li><strong>Artist Statement:</strong> Share your inspiration and process</li>
     <li><strong>Regular Updates:</strong> Keep profile current with latest work</li>
   </ul>
-  <h3>Maximize Visibility</h3>
+  <h3>Visibility, community, and buyers</h3>
   <ul>
-    <li><strong>Post Regularly:</strong> 1–2 new artworks per week minimum</li>
-    <li><strong>Join Challenges:</strong> Participate in bi-weekly challenges</li>
-    <li><strong>Engage Community:</strong> Post in the community forum, comment, like, and support others</li>
-    <li><strong>Respond Quickly:</strong> Fast replies boost your ranking</li>
+    <li><strong>Post regularly:</strong> Steady new listings can help collectors discover your work.</li>
+    <li><strong>Join challenges:</strong> Participate when available to connect with the community.</li>
+    <li><strong>Forum ideas:</strong> Share process or WIP posts, join Issue Discussion / Free Topic threads, use Showcase and link to listings — all optional.</li>
+    <li><strong>Engage:</strong> Comment and support others in a genuine way.</li>
+    <li><strong>Respond to buyers:</strong> Timely, clear replies often improve trust and completion of sales. Modam does <strong>not</strong> promise any particular search placement, ranking, or algorithmic boost from response speed.</li>
   </ul>
-  <h3>Pricing Strategy</h3>
+  <h3>Optional fulfillment touches</h3>
+  <ul>
+    <li>Some sellers add a thank-you note or certificate — entirely optional.</li>
+  </ul>
+  <h3>Pricing ideas</h3>
   <div class="box box-info">
     <ul>
       <li><strong>Start Competitive:</strong> Research similar artists' pricing</li>
@@ -239,11 +208,11 @@
     </ul>
   </div>
 
-  <h2>Resources & Support</h2>
+  <h2>Resources &amp; support</h2>
   <div class="box box-info">
     <p><strong>Email:</strong> <a href="mailto:modamceo@modam.app">modamceo@modam.app</a><br/>
-    <strong>In-App:</strong> Profile → Settings → Help Center<br/>
-    <strong>Response Time:</strong> Within 24 hours on business days</p>
+    <strong>In-app:</strong> Profile → Settings → Help &amp; Support<br/>
+    <strong>Response time:</strong> We target acknowledgment within <strong>1 business day</strong> for general inquiries; order disputes follow the <a href="refund-policy.html">Refund Policy</a></p>
   </div>
 
   <p style="margin-top:40px;text-align:center;font-size:14px;color:var(--muted2);">
@@ -252,7 +221,7 @@
   </p>
 </div>
 
-<footer>
+<footer class="doc-footer">
   <div class="footer-links">
     <a href="index.html">Home</a>
     <a href="privacy-policy.html">Privacy Policy</a>
@@ -264,5 +233,6 @@
   </div>
   <p class="footer-copy">© 2026 Modam. All rights reserved.</p>
 </footer>
+</div>
 </body>
 </html>

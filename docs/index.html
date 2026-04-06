@@ -9,102 +9,68 @@
   <meta property="og:type" content="website" />
   <title>Modam — Artist Marketplace</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --gold: #C8A96E; --gold-light: #E8C87A;
-      --bg: #010204; --card: #0B0F1A; --border: #1A2235;
-      --text: #E5E7EB; --muted: #6B7280;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
-
-    /* NAV */
-    nav { padding: 24px 40px; display: flex; justify-content: center; }
-    .logo-text { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 300; letter-spacing: 8px; color: var(--gold); text-transform: uppercase; text-decoration: none; }
-
-    /* HERO */
-    .hero { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 24px; text-align: center; }
-    .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(64px, 12vw, 120px); font-weight: 300; letter-spacing: 16px; color: var(--text); line-height: 1; margin-bottom: 20px; }
-    .hero-tagline { font-size: 14px; letter-spacing: 4px; color: var(--muted); text-transform: uppercase; margin-bottom: 60px; }
-    .hero-desc { max-width: 480px; font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 60px; }
-
-    /* BUTTONS */
-    .btn-group { display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 320px; }
-    .btn-primary { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 28px; background: var(--gold); color: #000; font-size: 14px; font-weight: 600; border-radius: 12px; text-decoration: none; letter-spacing: 0.5px; transition: background .2s; }
-    .btn-primary:hover { background: var(--gold-light); }
-    .btn-secondary { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 28px; background: transparent; border: 1px solid var(--border); color: var(--text); font-size: 14px; font-weight: 500; border-radius: 12px; text-decoration: none; transition: border-color .2s; }
-    .btn-secondary:hover { border-color: var(--gold); }
-
-    /* DIVIDER */
-    .divider { width: 1px; height: 80px; background: var(--border); margin: 60px auto; }
-
-    /* FEATURES */
-    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: var(--border); max-width: 800px; width: 100%; margin: 0 auto 80px; }
-    .feature { background: var(--bg); padding: 32px 24px; text-align: center; }
-    .feature-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; color: var(--gold); margin-bottom: 10px; }
-    .feature-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
-
-    /* FOOTER */
-    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; }
-    .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 24px; margin-bottom: 20px; }
-    .footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color .2s; }
-    .footer-links a:hover { color: var(--gold); }
-    .footer-copy { font-size: 12px; color: var(--border); letter-spacing: 1px; }
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="modam-docs.css" />
 </head>
 <body>
-  <nav>
-    <a class="logo-text" href="index.html">Modam</a>
-  </nav>
-
-  <section class="hero">
-    <h1 class="hero-title">Modam</h1>
-    <p class="hero-tagline">Where Student Artists Shine</p>
-    <p class="hero-desc">
-      A marketplace and community for artists.
-      Showcase your creativity, connect with collectors, discuss art, and turn your passion into a career.
-    </p>
-    <div class="btn-group">
-      <a class="btn-primary" href="https://apps.apple.com/app/artyard/id6746969829" target="_blank">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        Download on App Store
-      </a>
-      <a class="btn-secondary" href="https://play.google.com/store/apps/details?id=com.artyard.app" target="_blank">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.99.14l12.47-7.04-2.76-2.76-10.7 9.66zM.5 1.4C.19 1.74 0 2.27 0 2.96v18.08c0 .69.19 1.22.51 1.56l.08.08 10.12-10.12v-.24L.58 1.32.5 1.4zm19.1 11.03l-2.55-1.44-3.03 3.03 3.03 3.03 2.56-1.45c.73-.41.73-1.09.0-1.17zM4.17.24L16.64 7.28l-2.76 2.76L3.18.38A1.17 1.17 0 014.17.24z"/></svg>
-        Get it on Google Play
-      </a>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="features">
-      <div class="feature">
-        <div class="feature-title">Showcase</div>
-        <p class="feature-desc">Upload your artworks and build a professional portfolio visible to collectors worldwide.</p>
+  <div class="wrap">
+    <nav class="doc-nav">
+      <a class="nav-mark" href="index.html">Modam</a>
+      <div class="nav-links">
+        <a class="nav-story" href="about-modam.html">Our Story</a>
       </div>
-      <div class="feature">
-        <div class="feature-title">Community</div>
-        <p class="feature-desc">Join discussions, share ideas across art, finance, daily life, and more — all in one place.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-title">Sell</div>
-        <p class="feature-desc">Turn your passion into income. List your originals and prints for sale directly in the app.</p>
-      </div>
-    </div>
-  </section>
+    </nav>
 
-  <footer>
-    <div class="footer-links">
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="terms-of-service.html">Terms of Service</a>
-      <a href="data-deletion.html">Data Deletion</a>
-      <a href="shipping-policy.html">Shipping Policy</a>
-      <a href="refund-policy.html">Refund Policy</a>
-      <a href="artist-guidelines.html">Artist Guidelines</a>
-      <a href="mailto:modamceo@modam.app">Contact</a>
-    </div>
-    <p class="footer-copy">© 2026 Modam. All rights reserved.</p>
-  </footer>
+    <main class="home-main">
+      <h1 class="home-title">Modam</h1>
+      <p class="home-tagline">Where Student Artists Shine</p>
+      <p class="home-desc">
+        A marketplace and community for artists.
+        Showcase your creativity, connect with collectors, discuss art, and turn your passion into a career.
+      </p>
+      <div class="store-row">
+        <a class="store-btn store-btn--primary" href="https://apps.apple.com/app/artyard/id6746969829" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download on App Store
+        </a>
+        <a class="store-btn store-btn--ghost" href="https://play.google.com/store/apps/details?id=com.artyard.app" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.18 23.76c.3.17.64.22.99.14l12.47-7.04-2.76-2.76-10.7 9.66zM.5 1.4C.19 1.74 0 2.27 0 2.96v18.08c0 .69.19 1.22.51 1.56l.08.08 10.12-10.12v-.24L.58 1.32.5 1.4zm19.1 11.03l-2.55-1.44-3.03 3.03 3.03 3.03 2.56-1.45c.73-.41.73-1.09.0-1.17zM4.17.24L16.64 7.28l-2.76 2.76L3.18.38A1.17 1.17 0 014.17.24z"/></svg>
+          Get it on Google Play
+        </a>
+      </div>
+
+      <div class="home-divider" aria-hidden="true"></div>
+
+      <div class="home-features">
+        <div class="home-feature">
+          <h3>Showcase</h3>
+          <p>Upload your artworks and build a professional portfolio visible to collectors worldwide.</p>
+        </div>
+        <div class="home-feature">
+          <h3>Community</h3>
+          <p>Join discussions, share ideas across art, finance, daily life, and more — all in one place.</p>
+        </div>
+        <div class="home-feature">
+          <h3>Sell</h3>
+          <p>Turn your passion into income. List your originals and prints for sale directly in the app.</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="doc-footer">
+      <div class="footer-links">
+        <a href="about-modam.html">About Modam</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+        <a href="data-deletion.html">Data Deletion</a>
+        <a href="shipping-policy.html">Shipping Policy</a>
+        <a href="refund-policy.html">Refund Policy</a>
+        <a href="artist-guidelines.html">Artist Guidelines</a>
+        <a href="mailto:modamceo@modam.app">Contact</a>
+      </div>
+      <p class="footer-copy">© 2026 Modam. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>

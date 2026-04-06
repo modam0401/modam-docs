@@ -4,154 +4,94 @@
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Data Deletion — Modam</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    :root{--gold:#C8A96E;--gold-light:#E8C87A;--bg:#010204;--card:#0B0F1A;--border:#1A2235;--text:#E5E7EB;--muted:#6B7280;--muted2:#9CA3AF;}
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.7;}
-    nav{padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(1,2,4,.92);backdrop-filter:blur(12px);z-index:10;}
-    .logo-text{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;letter-spacing:6px;color:var(--gold);text-transform:uppercase;text-decoration:none;}
-    .nav-back{font-size:12px;color:var(--muted);text-decoration:none;letter-spacing:1px;transition:color .2s;}
-    .nav-back:hover{color:var(--gold);}
-    .hero{padding:72px 24px 48px;text-align:center;border-bottom:1px solid var(--border);}
-    .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,6vw,52px);font-weight:300;letter-spacing:2px;margin-bottom:12px;}
-    .hero .updated{font-size:12px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;}
-    .content{max-width:760px;margin:0 auto;padding:60px 24px 80px;}
-    h2{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--gold);margin:52px 0 18px;padding-bottom:12px;border-bottom:1px solid var(--border);}
-    h3{font-size:13px;font-weight:600;color:var(--muted2);letter-spacing:1px;text-transform:uppercase;margin:28px 0 12px;}
-    p{font-size:14px;color:var(--muted);margin-bottom:14px;}
-    ul,ol{margin-left:20px;margin-bottom:14px;}
-    li{font-size:14px;color:var(--muted);margin-bottom:7px;}
-    strong{color:var(--text);font-weight:600;}
-    a{color:var(--gold);text-decoration:none;}
-    a:hover{text-decoration:underline;}
-    .box{padding:18px 22px;border-radius:8px;margin:20px 0;border-left:3px solid;}
-    .box-info{background:rgba(200,169,110,.07);border-color:var(--gold);}
-    .box-warn{background:rgba(239,68,68,.06);border-color:#EF4444;}
-    .box-success{background:rgba(16,185,129,.06);border-color:#10B981;}
-    .box p,.box li{color:var(--muted2);}
-    .steps{margin:20px 0;}
-    .step{display:flex;gap:16px;margin:14px 0;align-items:flex-start;}
-    .step-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:rgba(200,169,110,.12);border:1px solid rgba(200,169,110,.3);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--gold);font-weight:600;margin-top:2px;}
-    .step-body{font-size:14px;color:var(--muted);}
-    table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px;}
-    th{background:var(--card);color:var(--gold);font-weight:500;padding:12px 16px;text-align:left;border-bottom:1px solid var(--border);}
-    td{padding:12px 16px;border-bottom:1px solid var(--border);color:var(--muted);}
-    footer{border-top:1px solid var(--border);padding:32px 24px;text-align:center;}
-    .footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 20px;margin-bottom:16px;}
-    .footer-links a{font-size:12px;color:var(--muted);text-decoration:none;transition:color .2s;}
-    .footer-links a:hover{color:var(--gold);}
-    .footer-copy{font-size:11px;color:var(--border);letter-spacing:1px;}
-    @media(max-width:600px){nav{padding:16px 20px;}.content{padding:40px 16px 60px;}}
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="modam-docs.css" />
 </head>
 <body>
-<nav>
-  <a class="logo-text" href="index.html">Modam</a>
-  <a class="nav-back" href="index.html">← Home</a>
+<div class="wrap">
+<nav class="doc-nav">
+  <a class="nav-mark" href="index.html">Modam</a>
+  <div class="nav-links">
+    <a class="nav-story" href="about-modam.html">Our Story</a>
+    <a class="nav-back" href="index.html">Home</a>
+  </div>
 </nav>
 
-<div class="hero">
+<div class="hero hero--doc">
   <h1>Data Deletion Policy</h1>
-  <p class="updated">Last updated: April 2026</p>
+  <p class="updated">Last updated: April 3, 2026</p>
 </div>
 
 <div class="content">
-  <p>At Modam, we respect your right to control your personal data. This page explains how to delete your data, what happens when you delete your account, and what data may be retained.</p>
+  <p>This page explains how to delete your Modam account, what happens to personal data, and what may be retained for legal or security reasons. It aligns with our <a href="privacy-policy.html">Privacy Policy</a>.</p>
 
-  <h2>1. Your Right to Delete Data</h2>
-  <p>You have the right to delete your Modam account and associated data at any time, for any reason. The deletion process is:</p>
+  <h2>1. What “deletion” means here</h2>
+  <p>Deletion is a <strong>process</strong>, not always a single instant event across every system:</p>
   <ul>
-    <li><strong>Simple</strong> — Can be done directly in the app in just a few taps</li>
-    <li><strong>Immediate</strong> — Most data is deleted right away</li>
-    <li><strong>Permanent</strong> — Deleted data cannot be recovered</li>
-    <li><strong>Free</strong> — No fees or charges for account deletion</li>
+    <li><strong>Immediately or promptly:</strong> We deactivate your account and remove or hide your profile and content from <strong>active</strong> use of the Service (so other users typically cannot see them).</li>
+    <li><strong>Within approximately thirty (30) days:</strong> We delete or irreversibly anonymize personal data in our primary (“live”) databases, except where a specific exception below applies.</li>
+    <li><strong>Backups:</strong> Residual copies may persist in encrypted backups until those backups expire on a rolling cycle (often up to about <strong>90 days</strong>), after which they are overwritten or purged according to vendor tooling.</li>
+    <li><strong>Legal records:</strong> Certain transaction or tax-related data may be kept in a <strong>separate, restricted</strong> form for statutory retention periods (often up to several years), sometimes <strong>anonymized or minimized</strong> where permitted.</li>
   </ul>
-
-  <h2>2. How to Delete Your Account</h2>
-  <h3>Method 1: Delete Through the App</h3>
-  <div class="steps">
-    <div class="step"><div class="step-num">1</div><div class="step-body">Open the <strong>Modam app</strong></div></div>
-    <div class="step"><div class="step-num">2</div><div class="step-body">Go to <strong>Profile</strong> tab</div></div>
-    <div class="step"><div class="step-num">3</div><div class="step-body">Tap the <strong>Settings</strong> icon in the top right</div></div>
-    <div class="step"><div class="step-num">4</div><div class="step-body">Scroll down to <strong>Account Management</strong></div></div>
-    <div class="step"><div class="step-num">5</div><div class="step-body">Tap <strong>"Delete Account"</strong> and confirm</div></div>
-  </div>
   <div class="box box-warn">
-    <p><strong>Warning:</strong> This action is permanent and cannot be undone. All your artworks, messages, and account data will be deleted.</p>
+    <p><strong>Messages, comments, and posts:</strong> We aim to remove them from the live Service quickly. However, limited technical copies (e.g. caches, logs, security investigations, dispute files, or legal holds) may persist for a period where needed for abuse prevention, dispute resolution, or compliance. Such retention is minimized and not used for marketing.</p>
   </div>
 
-  <h3>Method 2: Request via Email</h3>
+  <h2>2. How to request deletion</h2>
+  <h3>2.1 In the app</h3>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-body">Open the Modam app.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body">Go to <strong>Profile</strong> → <strong>Settings</strong>.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body">Use <strong>Account Management</strong> → <strong>Delete Account</strong> and confirm.</div></div>
+  </div>
+  <h3>2.2 By email</h3>
   <div class="box box-info">
     <p><strong>Send to:</strong> <a href="mailto:modamceo@modam.app">modamceo@modam.app</a><br/>
     <strong>Subject:</strong> Account Deletion Request<br/>
-    <strong>Include:</strong> Your registered email address, display name (if you remember it)<br/>
-    <strong>Response Time:</strong> Within 48 hours</p>
+    <strong>Include:</strong> Registered email and display name if known.<br/>
+    <strong>We aim to confirm within a few business days.</strong></p>
   </div>
 
-  <h2>3. What Gets Deleted</h2>
+  <h2>3. Outcomes by category</h2>
   <table>
-    <thead><tr><th>Data Type</th><th>Status</th><th>Timeline</th></tr></thead>
+    <thead><tr><th>Category</th><th>Typical treatment</th><th>Timing</th></tr></thead>
     <tbody>
-      <tr><td>Profile information (name, photo, bio)</td><td>Deleted</td><td>Instant</td></tr>
-      <tr><td>Your artworks and images</td><td>Deleted</td><td>Instant</td></tr>
-      <tr><td>Messages &amp; comments</td><td>Deleted</td><td>Instant</td></tr>
-      <tr><td>Community posts &amp; comments</td><td>Deleted</td><td>Instant</td></tr>
-      <tr><td>Likes &amp; bookmarks</td><td>Deleted</td><td>Instant</td></tr>
-      <tr><td>Purchase history (transaction records)</td><td>Anonymized &amp; archived</td><td>7 years (legal requirement)</td></tr>
-      <tr><td>Backup copies</td><td>Deleted from backups</td><td>Within 90 days</td></tr>
+      <tr><td>Profile, public listings, avatars</td><td>Removed from active Service; deleted or anonymized from live DB</td><td>Deactivation prompt; live DB within ~30 days</td></tr>
+      <tr><td>Community posts &amp; comments you created</td><td>Removed from active Service; purged from live DB subject to legal hold / abuse review</td><td>Same model as above</td></tr>
+      <tr><td>Messages</td><td>Removed from active messaging UI; backend deletion/anonymization per retention rules</td><td>Live DB within ~30 days unless hold</td></tr>
+      <tr><td>Backups</td><td>Overwritten on vendor backup cycle</td><td>Up to ~90 days typical maximum exposure in backups</td></tr>
+      <tr><td>Transaction / tax records</td><td>May be retained in restricted, often anonymized ledgers</td><td>As required by law (periods vary by jurisdiction)</td></tr>
+      <tr><td>Security / fraud logs</td><td>Short-term retention possible</td><td>Often up to ~90 days unless investigation requires longer</td></tr>
     </tbody>
   </table>
 
-  <h2>4. What Happens After Deletion</h2>
-  <div class="box box-info">
-    <ul>
-      <li>Your profile disappears from search results immediately</li>
-      <li>Your artworks are removed from the marketplace</li>
-      <li>You are logged out of all devices</li>
-      <li>Your email becomes available for new registrations after 30 days</li>
-    </ul>
-  </div>
+  <h2>4. After deletion</h2>
+  <ul>
+    <li>You are signed out on devices.</li>
+    <li>Your public profile and marketplace listings should disappear from the app’s normal views promptly after deactivation.</li>
+    <li>Re-registration with the same email may be blocked or delayed for a cooling-off period to prevent abuse.</li>
+  </ul>
   <div class="box box-warn">
-    <p><strong>Cannot Be Recovered:</strong> Once deleted, your account cannot be recovered. You will need to create a new account and re-upload your artworks.</p>
+    <p><strong>Irreversible:</strong> Once deletion completes, you cannot restore the same account history. You may open a new account if permitted.</p>
   </div>
 
-  <h2>5. Partial Data Deletion</h2>
-  <p>If you don't want to delete your entire account, you can remove specific content:</p>
-  <ul>
-    <li><strong>Delete an artwork:</strong> My Artworks → tap artwork → ⋮ menu → Delete Artwork</li>
-    <li><strong>Clear messages:</strong> Messages → long press conversation → Delete Conversation</li>
-    <li><strong>Delete community post:</strong> Open your post → tap edit icon → Delete</li>
-    <li><strong>Update profile:</strong> Profile → Edit Profile → remove or update any information</li>
-  </ul>
+  <h2>5. Partial removal</h2>
+  <p>Without deleting your whole account, you may delete individual artworks, posts, or conversations where the app provides those controls.</p>
 
-  <h2>6. Legal Data Retention</h2>
-  <p>Some data may be retained for legal or security reasons after account deletion:</p>
-  <ul>
-    <li><strong>Payment partner (Airwallex):</strong> Card and payment logs may be retained by Airwallex under their policies for fraud prevention, chargebacks, and regulations. Modam does not control deletion inside Airwallex's systems — see <a href="https://www.airwallex.com/terms/privacy-policy" target="_blank" rel="noopener noreferrer">Airwallex Privacy Policy</a>.</li>
-    <li><strong>Financial Records (7 years):</strong> Transaction records anonymized and stored for tax compliance</li>
-    <li><strong>Security Logs (90 days):</strong> Login IP addresses and fraud prevention data</li>
-    <li><strong>Ban Records:</strong> If your account was banned, records are kept to prevent re-registration</li>
-  </ul>
+  <h2>6. Third parties</h2>
+  <p><strong>Stripe</strong> and other payment providers retain certain payment records under their own policies. Modam cannot delete data inside their systems; see <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">Stripe Privacy Policy</a>.</p>
 
-  <h2>7. Your Rights (GDPR / CCPA)</h2>
-  <ul>
-    <li><strong>Right to be Forgotten</strong> — Request complete data deletion</li>
-    <li><strong>Right to Access</strong> — Download all your data</li>
-    <li><strong>Right to Rectification</strong> — Correct inaccurate data</li>
-    <li><strong>Right to Data Portability</strong> — Export your data</li>
-    <li><strong>Right to Opt-Out</strong> — We don't sell your data</li>
-  </ul>
+  <h2>7. Your rights</h2>
+  <p>Depending on jurisdiction, you may have rights of access, correction, erasure, restriction, objection, and portability. Contact <a href="mailto:modamceo@modam.app">modamceo@modam.app</a>. See also <a href="privacy-policy.html">Privacy Policy</a> section on access requests.</p>
 
   <h2>8. Contact</h2>
   <div class="box box-info">
-    <p><strong>Email:</strong> <a href="mailto:modamceo@modam.app">modamceo@modam.app</a><br/>
-    <strong>In-App:</strong> Profile → Settings → Help &amp; Support<br/>
-    <strong>Response Time:</strong> Within 48 hours</p>
+    <p><strong>Email:</strong> <a href="mailto:modamceo@modam.app">modamceo@modam.app</a></p>
   </div>
 </div>
 
-<footer>
+<footer class="doc-footer">
   <div class="footer-links">
     <a href="index.html">Home</a>
     <a href="privacy-policy.html">Privacy Policy</a>
@@ -163,5 +103,6 @@
   </div>
   <p class="footer-copy">© 2026 Modam. All rights reserved.</p>
 </footer>
+</div>
 </body>
 </html>

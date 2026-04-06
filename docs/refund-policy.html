@@ -4,131 +4,94 @@
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Refund Policy — Modam</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    :root{--gold:#C8A96E;--bg:#010204;--card:#0B0F1A;--border:#1A2235;--text:#E5E7EB;--muted:#6B7280;--muted2:#9CA3AF;}
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.7;}
-    nav{padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(1,2,4,.92);backdrop-filter:blur(12px);z-index:10;}
-    .logo-text{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;letter-spacing:6px;color:var(--gold);text-transform:uppercase;text-decoration:none;}
-    .nav-back{font-size:12px;color:var(--muted);text-decoration:none;letter-spacing:1px;transition:color .2s;}
-    .nav-back:hover{color:var(--gold);}
-    .hero{padding:72px 24px 48px;text-align:center;border-bottom:1px solid var(--border);}
-    .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,6vw,52px);font-weight:300;letter-spacing:2px;margin-bottom:12px;}
-    .hero .updated{font-size:12px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;}
-    .content{max-width:760px;margin:0 auto;padding:60px 24px 80px;}
-    h2{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--gold);margin:52px 0 18px;padding-bottom:12px;border-bottom:1px solid var(--border);}
-    h3{font-size:13px;font-weight:600;color:var(--muted2);letter-spacing:1px;text-transform:uppercase;margin:28px 0 12px;}
-    p{font-size:14px;color:var(--muted);margin-bottom:14px;}
-    ul,ol{margin-left:20px;margin-bottom:14px;}
-    li{font-size:14px;color:var(--muted);margin-bottom:7px;}
-    strong{color:var(--text);font-weight:600;}
-    a{color:var(--gold);text-decoration:none;}
-    a:hover{text-decoration:underline;}
-    .box{padding:18px 22px;border-radius:8px;margin:20px 0;border-left:3px solid;}
-    .box-info{background:rgba(200,169,110,.07);border-color:var(--gold);}
-    .box-warn{background:rgba(239,68,68,.06);border-color:#EF4444;}
-    .box-success{background:rgba(16,185,129,.06);border-color:#10B981;}
-    .box p,.box li{color:var(--muted2);}
-    .steps{margin:20px 0;}
-    .step{display:flex;gap:16px;margin:14px 0;align-items:flex-start;}
-    .step-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:rgba(200,169,110,.12);border:1px solid rgba(200,169,110,.3);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--gold);font-weight:600;margin-top:2px;}
-    .step-body{font-size:14px;color:var(--muted);}
-    footer{border-top:1px solid var(--border);padding:32px 24px;text-align:center;}
-    .footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 20px;margin-bottom:16px;}
-    .footer-links a{font-size:12px;color:var(--muted);text-decoration:none;transition:color .2s;}
-    .footer-links a:hover{color:var(--gold);}
-    .footer-copy{font-size:11px;color:var(--border);letter-spacing:1px;}
-    @media(max-width:600px){nav{padding:16px 20px;}.content{padding:40px 16px 60px;}}
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="modam-docs.css" />
 </head>
 <body>
-<nav>
-  <a class="logo-text" href="index.html">Modam</a>
-  <a class="nav-back" href="index.html">← Home</a>
+<div class="wrap">
+<nav class="doc-nav">
+  <a class="nav-mark" href="index.html">Modam</a>
+  <div class="nav-links">
+    <a class="nav-story" href="about-modam.html">Our Story</a>
+    <a class="nav-back" href="index.html">Home</a>
+  </div>
 </nav>
 
-<div class="hero">
+<div class="hero hero--doc">
   <h1>Refund Policy</h1>
-  <p class="updated">Last updated: April 2026</p>
+  <p class="updated">Last updated: April 3, 2026</p>
 </div>
 
 <div class="content">
-  <p>At Modam, we strive to ensure both buyers and sellers have a fair and transparent transaction experience. Our refund policy varies depending on the transaction type.</p>
+  <p>This Refund Policy applies to purchases completed through Modam checkout (Stripe). It should be read together with the <a href="terms-of-service.html">Terms of Service</a> and <a href="shipping-policy.html">Shipping Policy</a>.</p>
   <div class="box box-info">
-    <p><strong>Payments:</strong> Purchases on Modam are processed by <strong>Airwallex</strong>. Any refund that is approved under this policy is initiated in line with our internal procedures and Airwallex's rules; timing may depend on the original payment method.</p>
+    <p><strong>Payments:</strong> Approved refunds are processed according to Modam’s internal procedures and <strong>Stripe</strong> rules. Timing may depend on the original payment method and your bank.</p>
   </div>
 
-  <h2>Direct Transaction</h2>
-  <div class="box box-warn">
-    <p><strong>No platform refunds available.</strong> For direct transactions, buyers and sellers must negotiate directly. Modam is not responsible for disputes or refunds. We recommend using escrow for valuable items.</p>
-  </div>
-  <ul>
-    <li>All sales are final through the platform</li>
-    <li>Buyer and seller communicate directly for any issues</li>
-    <li>Platform provides messaging but no refund processing</li>
-  </ul>
+  <h2>1. How Modam checkout works</h2>
+  <p>All standard sales use <strong>one checkout flow</strong>: payment is collected through Modam, and funds may be held during a <strong>buyer protection period</strong> as described in the Terms and in the app (commonly about <strong>seven (7) days</strong> after delivery confirmation, or as otherwise shown). There is no separate “direct transaction” path that removes platform protections or this policy.</p>
 
-  <h2>Escrow Transaction</h2>
+  <h2>2. Buyer protection &amp; eligible refund reasons</h2>
   <div class="box box-success">
-    <p><strong>Protected by Modam Buyer Protection.</strong> Escrow transactions include platform protection and refund processing.</p>
+    <p>Within the dispute window shown in the app, you may request Modam’s review for issues such as:</p>
   </div>
-
-  <h3>Eligible Refund Reasons</h3>
   <ul>
-    <li><strong>Item Significantly Different:</strong> Artwork does not match description or photos</li>
-    <li><strong>Damaged During Shipping:</strong> Item arrived damaged — must report within 48 hours</li>
-    <li><strong>Item Not Received:</strong> Package lost or never delivered</li>
-    <li><strong>Authenticity Issues:</strong> Item is not original as described</li>
+    <li><strong>Not as described:</strong> The artwork materially differs from the listing description or representative photos.</li>
+    <li><strong>Damage in transit:</strong> Documented damage — report promptly with photos as instructed in the app or by support (typically within <strong>48 hours</strong> of delivery).</li>
+    <li><strong>Not received:</strong> No delivery where tracking or facts support a non-delivery claim.</li>
+    <li><strong>Authenticity / major misrepresentation:</strong> Clear misstatement of originality or medium where provable.</li>
   </ul>
+  <p>Approval is <strong>case-by-case</strong>. We may request evidence (photos, tracking, communications). <strong>Purchase of shipping insurance or lack thereof does not determine eligibility.</strong></p>
 
-  <h3>Refund Request Process</h3>
+  <h2>3. Before the seller ships</h2>
+  <p>If the seller has not yet shipped and the order still shows as cancellable in the app, you may request cancellation. We will process cancellations that the app allows for that order status and that comply with applicable law. If a refund is approved, it is not conditioned on insurance.</p>
+
+  <h2>4. Dispute request process</h2>
   <div class="steps">
-    <div class="step"><div class="step-num">1</div><div class="step-body"><strong>Open Dispute</strong> within 7 days of delivery confirmation</div></div>
-    <div class="step"><div class="step-num">2</div><div class="step-body"><strong>Provide Evidence</strong> — upload clear photos showing the issue</div></div>
-    <div class="step"><div class="step-num">3</div><div class="step-body"><strong>Admin Review</strong> — our team reviews within 3–5 business days</div></div>
-    <div class="step"><div class="step-num">4</div><div class="step-body"><strong>Decision</strong> — if approved, full refund including platform fees</div></div>
+    <div class="step"><div class="step-num">1</div><div class="step-body"><strong>Open a request</strong> in the app (e.g. Order details → report issue) or email <a href="mailto:modamceo@modam.app">modamceo@modam.app</a> within the <strong>buyer protection / dispute window</strong> shown for your order.</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><strong>Provide evidence</strong> — clear photos, tracking links, and a short factual summary.</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><strong>Review</strong> — we aim to complete an initial decision within about <strong>3–5 business days</strong> where information is complete; complex cases may take longer.</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-body"><strong>Outcome</strong> — if approved, we initiate refund per Stripe and card-network timelines (typically several business days after approval). Partial refunds or returns may be offered where fair.</div></div>
   </div>
 
-  <h3>Return Shipping</h3>
-  <ul>
-    <li><strong>Seller's Fault:</strong> Seller pays return shipping</li>
-    <li><strong>Buyer's Fault:</strong> Buyer pays return shipping</li>
-    <li>Original artwork must be returned in same condition</li>
-    <li>Use insured shipping for valuable items</li>
-  </ul>
+  <h2>5. Returns</h2>
+  <p>If a return is required, the party at fault (as determined in review) is generally responsible for return shipping cost. Use a <strong>trackable</strong> method and keep proof of shipment. <strong>Modam does not sell shipping insurance;</strong> you may choose carrier services that suit the value of the item, but that choice does not change refund eligibility under this policy.</p>
 
-  <h2>Non-Refundable Cases</h2>
+  <h2>6. Non-refundable cases (examples)</h2>
   <div class="box box-warn">
-    <p><strong>The following are NOT eligible for refunds:</strong></p>
+    <p>The following are typically <strong>not</strong> eligible:</p>
   </div>
   <ul>
-    <li>Buyer changed their mind after purchase</li>
-    <li>Item accurately matches description and photos</li>
-    <li>Minor color differences due to screen calibration</li>
-    <li>Buyer's remorse or preference changes</li>
-    <li>After 7-day dispute window has passed</li>
-    <li>Buyer damaged the item after delivery</li>
+    <li>Change of mind after shipment or outside the dispute window.</li>
+    <li>Minor color variance due to screens or photography.</li>
+    <li>Damage after delivery caused by the buyer.</li>
+    <li>Issues reported after the protection window has ended (unless law requires otherwise).</li>
+    <li><strong>Customs refusal or abandonment</strong> where the buyer failed to pay duties, provide required importer information, or comply with import rules — subject to case review and applicable law. Documented <strong>carrier or customs storage, return freight, or disposal fees</strong> tied to that refusal may be treated as part of the loss and allocated to the at-fault party where reasonable.</li>
   </ul>
 
-  <h2>Challenge & Auction Items</h2>
+  <h2>7. Challenges, auctions, and special formats</h2>
   <div class="box box-warn">
-    <p><strong>All sales are final for auction wins.</strong> No refunds for challenge auction items. Review artwork details carefully before bidding — bids are binding commitments.</p>
+    <p>Challenge, auction, or promotional sales may be <strong>final</strong> or subject to <strong>additional rules</strong> displayed when you bid or join. Read on-screen terms before committing.</p>
   </div>
 
-  <h2>Refund Timeline</h2>
+  <h2>8. Refund timing</h2>
   <ul>
-    <li><strong>Dispute Review:</strong> 3–5 business days</li>
-    <li><strong>Refund Processing:</strong> 5–10 business days after approval</li>
-    <li><strong>Bank Processing:</strong> Additional 3–5 business days</li>
+    <li><strong>Internal review:</strong> typically 3–5 business days when evidence is complete.</li>
+    <li><strong>Payment partner &amp; bank:</strong> often an additional 5–15 business days after approval.</li>
   </ul>
-  <p>Total time: approximately 11–20 business days from dispute resolution.</p>
 
-  <h2>Contact Support</h2>
+  <h2>9. Response times (support vs. disputes)</h2>
+  <p>Timelines are <strong>targets</strong> or <strong>typical</strong> ranges, not guarantees.</p>
+  <ul>
+    <li><strong>General support</strong> (account, app usage, questions not tied to an open paid-order dispute): we target an initial acknowledgment within <strong>one (1) business day</strong>.</li>
+    <li><strong>Refund and order disputes</strong> (paid order, evidence submitted): we typically complete an initial review within <strong>three to five (3–5) business days</strong> when information is complete, as described in Section 4.</li>
+  </ul>
+
+  <h2>10. Contact</h2>
   <div class="box box-info">
     <p><strong>Email:</strong> <a href="mailto:modamceo@modam.app">modamceo@modam.app</a><br/>
-    <strong>In-App:</strong> Order Details → Report Issue<br/>
-    <strong>Response Time:</strong> Within 24 hours</p>
+    <strong>In-app:</strong> Order details → support / report issue</p>
   </div>
 </div>
 
@@ -144,5 +107,6 @@
   </div>
   <p class="footer-copy">© 2026 Modam. All rights reserved.</p>
 </footer>
+</div>
 </body>
 </html>
