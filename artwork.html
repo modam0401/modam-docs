@@ -7,9 +7,9 @@
   <!-- OG / Twitter 태그 (JS로 동적 업데이트됨) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Modam" />
-  <meta property="og:title" content="Artwork on Modam" />
-  <meta property="og:description" content="Discover and collect original artworks from emerging artists." />
-  <meta property="og:image" content="https://modam0401.github.io/modam-docs/og-default.png" />
+  <meta property="og:title" content="Modam Artwork" />
+  <meta property="og:description" content="View this artwork on Modam." />
+  <meta property="og:image" content="https://modam.app/og-default.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Artwork on Modam" />
   <meta name="twitter:description" content="Discover and collect original artworks from emerging artists." />
@@ -266,7 +266,9 @@
   <div id="error">
     <h2>Artwork not found</h2>
     <p>This artwork may have been removed or the link is invalid.</p>
-    <a href="https://modam0401.github.io/modam-docs/index.html" style="color: var(--gold); font-size: 14px;">Go to Modam →</a>
+    <div class="actions">
+      <a href="https://modam.app/index.html" style="color: var(--gold); font-size: 14px;">Go to Modam →</a>
+    </div>
   </div>
 
   <p class="logo">Modam</p>
@@ -284,7 +286,7 @@
   async function init() {
     if (!artworkId) {
       // ID 없이 접근 시 메인 페이지로 리다이렉트
-      location.replace('https://modam0401.github.io/modam-docs/index.html');
+      location.replace('https://modam.app/index.html');
       return;
     }
 
